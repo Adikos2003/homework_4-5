@@ -6,6 +6,8 @@ import Form from 'react-bootstrap/Form'
 import InputGroup from 'react-bootstrap/InputGroup'
 import Row from 'react-bootstrap/Row'
 import { postData } from '../redux/action'
+import '../App.css'
+
 
 function PostRequest() {
   const dispatch = useDispatch()
@@ -27,8 +29,7 @@ function PostRequest() {
   }
 
   return (
-    <div style={{ maxWidth: '600px', margin: '0 auto', padding: '20px', border: '1px solid #ccc', borderRadius: '8px', backgroundColor: '#f9f9f9' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Форма от Мухи с bootstrap</h2>
+    <div style={{ maxWidth: '400px',height: '200px', margin: '0 auto', padding: '20px', border: '1px solid #ccc', borderRadius: '8px', backgroundColor: '#f9f9f9' }}>
       <Form onSubmit={handleSubmit}>
         <Row className="mb-3">
           <Form.Group as={Col} sm="4" controlId="inlineFormInputName">
@@ -46,7 +47,7 @@ function PostRequest() {
             <Form.Check type="checkbox" label="I'm not a robot" name="isHuman" checked={formData.isHuman} onChange={handleChange} />
           </Form.Group>
           <Col sm="2" className="d-flex align-items-end">
-            <Button variant="primary" type="submit" style={{ width: '100%' }}>Submit</Button>
+            <Button variant="primary" type="submit" style={{ width: '150px', height: '40px', backgroundColor: "blue",border:"none", color: "white",borderRadius: '16px',}}>Submit</Button>
           </Col>
         </Row>
       </Form>
